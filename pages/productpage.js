@@ -1,0 +1,17 @@
+class productpage {
+    constructor(page) {
+        this.page = page;
+        this.addtocart = page.locator('#add-to-cart-sauce-labs-backpack');
+        this.carticon = page.locator('.shopping_cart_link');
+    }
+
+    async addproduct() {
+        await this.addtocart.click();
+    }
+
+    async gotocart() {
+        await this.carticon.click();
+    }
+}
+
+module.exports = productpage;
